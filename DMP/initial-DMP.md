@@ -538,7 +538,7 @@ The submission of the data to ACTRIS ARES requires that level 0 data are in a sp
 
 Table 4.1.3.1. *ARES Data Products Availability *
 
-*ADD FIGURE*
+*ADD THE NEW FIGURE- The one Lucia inserted in the issue #19*
 
 #### 4.1.4 CLU dataflow and data management
 
@@ -611,8 +611,7 @@ Standard vocabulary might not always be used, but in all cases they should be ma
 
 **Figure needed showing the meta data flow and interfaces throughout the flow from NF to ACTRIS Data Centre – Richard and Cathrine is working on this. Made in line with the others (layout wise), clearly stating the technologies with most “FAIR” data at the top (ACTRIS DC and the various ways of getting (meta)data)**
 
-ACTRIS will harvest metadata from a large range of observations employing methodologies provided by multiple data centre units covering different types of data both in terms of size, time coverage and metadata. The ACCESS unit aims at providing discovery metadata in a common format for all ACTRIS level 2 data, using a common standard that is WIS compliant such as ISO19139 or ISO19115. A decision about the standard is not taken, and under consideration. In any case, exceptions may occur in cases where the selected metadata standards do not meet the need to describe the data. The present situation is shown in Table (refer to the one at the end of the section). 
-
+ACTRIS will harvest metadata from a large range of observations employing methodologies provided by multiple data centre units covering different types of data both in terms of size, time coverage and metadata. The ACCESS unit aims at providing discovery metadata in a common format for all ACTRIS level 2 data, using a common standard that is WIS compliant such as ISO19139 or ISO19115. 
 Future efforts will further develop the system shown in Figure XXX (that Richard is producing now) and make it possible for the ACCESS unit to harvest all metadata from the different data centre units and collect this in a central ACTRIS metadata catalog and provide this through a commonly used protocol for Metadata harvesting like OAI-PMH or similar. A decision about the standard is not taken, and under consideration. The present situation is shown in Table (refer to the one at the end of the section). ACTRIS data should be described with rich metadata. Currently metadata services are offered on data centre unit level, but the aim is to offer all ACTRIS level 2 data through a centralized metadata service.
 
 There might be instances where standards do not cover the need for describing the data at the data centre unit. In this case, ACTRIS Data Centre will still try to provide metadata in a way that is similar to the agreed formats and standards and at the same time push for an extension of the specified standard.
@@ -641,13 +640,15 @@ ACTRIS metadata should be registered or indexed in relevant metadata catalogs
 |         WIGOS              |          NaN              |  None                                                                                      |
 |	      Copernicus           | Defined by primary repository  |  None																		          |
 |         re3data              | To be defined					|  None																			      |
-|         EOSC             | To be decided					|  None																					      |  
+|         EOSC             | To be decided					|  None			
+											|		
+|         EVDC?              |Should this be included here? ACTRIS is among the included datasets				|  None																			      |															      
 
 *Table x: ACTRIS metadata registered or indexed in relevant metadata catalogs.*
 
 #### 4.2.3 Traceability of ACTRIS data
 
-The term measurement traceability is used to refer to an unbroken chain of comparisons relating an instrument's measurements to a known standard, time, processing, software etc. Calibration to a traceable standard can be used to determine an instrument's bias, precision, and accuracy. The ability to trace a measurements back to its origin is important for several reasons; It increase the quality by facilitating back-out or reprocess bad data, and conversely, it allows reward and boost good data sources and processing techniques. This is also to ensure that proper attribution is given to data originators adequately reflecting their contributions through the data production chain.
+The term measurement traceability is used to refer to an unbroken chain of comparisons relating an instrument's measurements to a known standard, time, processing, software etc. Calibration to a traceable standard can be used to determine an instrument's bias, precision, and accuracy. The ability to trace a measurements back to its origin is important for several reasons: it increases the reliability by facilitating back-out or reprocess bad data, and conversely, it allows reward and boost good data sources and processing techniques. This is also to ensure that proper attribution is given to data originators adequately reflecting their contributions through the data production chain.
 
 ACTRIS works towards establishing traceability for all variables using persistent identifiers (PIDs). This work is in development, and need close interaction with the topical centres as well as National Facilities. Currently ACTRIS is using digital object identifiers (DOIs) for some level 3 datasets though the [Data Cite Metadata Store API](https://mds.datacite.org/), and more will be implemented.
 
@@ -724,7 +725,7 @@ There are valuable and contributing networks to ACTRIS e.g. EMEP, GAW, EARLINET,
 As a guiding principle, ACTRIS should make sure that metadata and data use a formal, accessible, shared and broadly applicable language for knowledge representation in order to facilitate interoperability. Still, work remains to see if a common solution could be agreed upon. The intricate nature of the data and metadata might require the use of different solutions to suit the needs of different data centre units. As mention in section 4.2 metadata standard and vocabularies commonly used in the atmospheric domain should be applied, unless the common solutions do not address the specific need for the DC unit.
 Implementation of new standards for data and metadata used in the context of ACTRIS should be discussed by all the DC units. The aim should be to harmonize data and metadata as much as possible, both in terms of technical aspects related to implementation, but also making it easier for the end user to make use of the data.
 
-By many of the DC units the Thredds Data Server (TDS) is used for serving data and metadata in an automated way as netCDF files through the OPeNDAP protocol (this apporach is implemented by In-Situ, ARES, ASC, GRES).
+By many of the DC units the Thredds Data Server (TDS) is used for serving data and metadata in an automated way as netCDF files through the OPeNDAP protocol (this approach is implemented by In-Situ, ARES, ASC, GRES).
 
 In addition to this, ARES provides a REST API for machine-to-machine interaction. The API serves metadata (info, provenance, versions, quality controls, etc.) in JSON format and data (specific files or datasets previously generated) in NetCDF format. 
 
@@ -785,7 +786,9 @@ The table shows the data and software usage licence July 2019.
 
 ## 6. Data security
 
-The main structure and installations of the ACTRIS Data Centre is located at NILU - Norwegian Institute for Air Research, Kjeller, Norway. NILU hosts EBAS archiving all in situ data sets, in addition to the ACTRIS Data Portal. The other installations are the EARLINET DB at National Research Council - Institute of Environmental Analysis (CNR), Tito Scalo, Potenza, Italy, the satellite data components at the University of Lille, Villeneuve d'Ascq, France, and the cloud profile data in the Cloudnet DB at the Finnish Meteorological Institute in Helsinki, Finland.
+The ACTRIS Data Centre collects a wide variety of datasets resulting from diverse experimental instruments. setups and metholodogies, so that it is built around high specialized data centre units which handle this diversity in a appropriate way. 
+In order to gaurantee the data security some common requireemnts will be fulfilled by each one of the involved units and institution. All ACTRIS DC units will implement a secure and robust ICT infrastructure and an information security policy; in particular, all actions for guaranteeing the required level of protection in data archiving and provision. All units will implement regular and frequent back up schedule, off-line geographically independent backup, and design a disaster recovery plan. 
+
 
 ### 6.1 Archiving and preservation of In-Situ data
 
@@ -841,7 +844,7 @@ Some higher level data products are stored at NILU in a file archive, this is da
 ### Appendix 1: List of ACTRIS variables and recommended methodology
 [List of ACTRIS variables and recommended methodology](https://folk.nilu.no/~richard/actris-ri-variables/Appendix_I_ACTRIS-RI_variables_21February2018.xlsx)
 
-*Additional information:* During ACTRIS-2, e.g. the aerosol and cloud databases will be augmented with new classification products developed through the combination of existing sensors with additional instrumentation; and products providing information about aerosol layering and typing, together with advanced products derived from long term series or special case analyses. In addition, new parameters utilizing these products will also be prepared, and standardized pre processed lidar data and NRT optical property profiles will be available.
+*Additional information:* During ACTRIS-2, e.g. the aerosol and cloud databases has been augmented with new classification products developed through the combination of existing sensors with additional instrumentation; and products providing information about aerosol layering and typing, together with advanced products derived from long term series or special case analyses have veen designed. In addition, new parameters utilizing these products will also be prepared, and standardized pre processed lidar data and NRT optical property profiles will be available. 
 
 ### Appendix 2: List of ACTRIS level 3 data products
 [List of ACTRIS level 3 data products](https://folk.nilu.no/~richard/actris-ri-variables/Appendix_II_ACTRIS-RI_level3_variables_21February2018.xlsx)
